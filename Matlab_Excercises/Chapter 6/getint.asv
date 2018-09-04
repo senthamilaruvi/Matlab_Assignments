@@ -1,0 +1,11 @@
+%To get an integer and returns a vector
+function out = getint(n)
+subfun(n);
+out = 1:n;
+end
+function subfun(n)
+a = int32(n);
+while n ~= a
+    disp('The number is not an integer')
+end
+end

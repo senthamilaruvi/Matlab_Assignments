@@ -1,0 +1,12 @@
+% wind chill factor
+mat = zeros(16,12);
+fprintf('The WCF for given input is %-3.3f\n',WCF);
+T(1,16) = -20:5:55;
+V(1,12) = 0:5:55;
+for T = -20:5:55
+    for V = 0:5:55
+        WCF = (35.7 + 0.6*T - 35.7*(V^(0.16)) + 0.43*T*(V^(0.16)));
+        mat(T,V) = WCF;
+    end
+end
+disp(mat);

@@ -1,0 +1,3 @@
+%This function is to calculate deviatoric part of sigma
+% Name: Senthamilaruvi Moorthy Date: 10/12/2015
+function [sigma_deviatoric] = deviatoric_comp(sigma)

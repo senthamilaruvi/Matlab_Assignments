@@ -1,0 +1,39 @@
+% counting number of rejects
+load pipedata.dat
+[r c] = size(pipedata);
+count = 0;
+weight = zeros(1,c);
+leng = zeros(1,c);
+    for j = 1:c
+        weight(1,j) = pipedata(1,j);
+        leng(1,j) = pipedata(2,j);
+        a = weight(1,j);
+        b = leng(1,j);
+        f = 10.3;
+        g = 10.4;
+        h = 2.1;
+        i = 2.3;
+        if  ((a <= f) || (a >= g)) 
+            count = count+1;
+        else
+            count = 0;
+        end
+        if ((b >= 2.1) || (b <= i));
+            count1 = count1 +1;
+        else
+            count1 = 0;
+        end
+        if count > count1
+            count = count;
+        else
+            count = count1;
+        end
+   end
+  if count >= 1
+  fprintf('The number of rejects is %d\n',count);
+  else
+  display('No rejects');
+  end
+  
+    
+    

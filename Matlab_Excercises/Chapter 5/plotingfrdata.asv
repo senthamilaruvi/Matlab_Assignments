@@ -1,0 +1,13 @@
+% script that reads datas from a file and plot it in graph
+load datafile.dat;
+y = zeros(size(datafile));
+[r c] = size(datafile);
+for i = 1:r
+    x = 1:r;
+    y(i,:) = datafile(i,:);
+    subplot(1,r,i);
+    plot(x,y,'g-');
+    xlabel('x');
+    ylabel('y');
+    title('Ploting from datafile');
+end

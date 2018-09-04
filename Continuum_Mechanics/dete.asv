@@ -1,0 +1,12 @@
+% This program calculates determinant of a matrix 
+% Name: Senthamilaruvi Moorthy Date: 09/29/2015
+function M = dete(A)
+sum = 0;
+for ii = 1:3
+    for jj = 1:3
+        for kk = 1:3
+            p =  [ii jj kk];
+            I = eye(3,3);
+            En = det(I(p,:));
+            sum = 
+            

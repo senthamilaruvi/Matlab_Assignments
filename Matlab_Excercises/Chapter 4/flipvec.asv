@@ -1,0 +1,16 @@
+% function flipvector reverses and print if it is row vector
+% reverses and print if it is column vector
+% Prints as it is if it is a scalar or matrix
+function vec = flipvec(argument)
+[r c] = size(argument);
+if r == 1 || c == 1
+    temp = r;
+    r = c;
+    c = temp;
+    disp(r:c)
+elseif r == 1 && c == 1
+    disp(argument)
+else
+    
+ 
+
